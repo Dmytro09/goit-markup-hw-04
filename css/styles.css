@@ -372,6 +372,11 @@ position: absolute;
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+a.media-list:hover,
+a.media-list:focus {
+        background-color: #404bbf;
+}
+
 /**
   |============================
   | Footer Section Styles-index
@@ -417,10 +422,18 @@ position: absolute;
 
 }
 
+.container-footer {
+        display: flex;
+        align-items: baseline;
+
+}
+
+.footer-container-text {
+        margin-right: 120px;
+}
+
 .footer-media-class {
         box-sizing: border-box;
-        margin-right: 120px;
-        display: block;
 }
 
 .footer-media-title {
@@ -435,7 +448,6 @@ position: absolute;
 
 .footer-media-list {
         display: flex;
-        justify-content: center;
         align-items: center;
         gap: 16px;
         margin-top: 8px;
@@ -461,6 +473,10 @@ position: absolute;
 
 }
 
+.footer-media-link:hover,
+.footer-media-link:focus {
+        background-color: #31d0aa;
+}
 /**
   |============================
   | Buttons Styles-Portfolio
@@ -612,4 +628,69 @@ position: absolute;
         box-sizing: border-box;
         overflow-x: hidden;
         overflow-y: hidden;
+}
+
+/**
+  |============================
+  | Modal Window Styles
+  |============================
+*/
+.backdrop.is-hidden {
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+}
+.backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(46, 47, 66, 0.4);
+        z-index: 100;
+        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 408px;
+        min-height: 584px;
+        flex-shrink: 0;
+        border-radius: 4px;
+        background: #FCFCFC;
+        box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        background-color: #E7E9FC;
+        border-radius: 50%;
+        border: none;
+        padding: 0;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        color: #2E2F42;
+}
+.modal-icon {
+        fill: currentColor;
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+.modal-btn:hover,
+.modal-btn:focus {
+        background-color: #404bbf;
+        color: #fff;
+        border: none;
 }
