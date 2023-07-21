@@ -234,6 +234,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
         gap: 24px;
         margin-left: auto;
         margin-right: auto;
+        justify-content: space-between;
  
 }
 
@@ -273,6 +274,17 @@ position: absolute;
         margin-bottom: 8px;
 
 }
+
+.features-svg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 112px;
+        flex-shrink: 0;
+        border-radius: 4px;
+        background-color: #f4f4fd;
+        margin-bottom: 8px;
+        }
 /**
   |============================
   | What are we doing/Duties Styles-index
